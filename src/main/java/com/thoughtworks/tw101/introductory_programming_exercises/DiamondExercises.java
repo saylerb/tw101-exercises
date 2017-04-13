@@ -13,7 +13,16 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int num = n - i; num > 0; num--) {
+                System.out.print(" ");
+            }
 
+            for (int asterisks = 0; asterisks < i + (i + 1); asterisks++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond
