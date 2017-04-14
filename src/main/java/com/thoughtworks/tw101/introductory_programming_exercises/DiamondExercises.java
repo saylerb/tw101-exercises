@@ -42,15 +42,16 @@ public class DiamondExercises {
         Integer totalLines = (n * 2) - 1;
         Integer middleRowIndex = (totalLines - 1) / 2;
 
-        for (int i = 0; i < totalLines; i++) {
+        for (int rowIndex = 0; rowIndex < totalLines; rowIndex++) {
 
-            Integer padding = abs(middleRowIndex - i);
+            Integer paddingTotal = abs(middleRowIndex - rowIndex);
+            Integer starTotal = totalLines - (paddingTotal * 2);
 
-            for (int num = 0; num < padding; num++) {
+            for (int padIndex = 0; padIndex < paddingTotal; padIndex++) {
                 System.out.print(" ");
             }
 
-            for (int asterisks = 0; asterisks < totalLines - (padding * 2); asterisks++) {
+            for (int starIndex = 0; starIndex < starTotal; starIndex++) {
                 System.out.print("*");
             }
 
