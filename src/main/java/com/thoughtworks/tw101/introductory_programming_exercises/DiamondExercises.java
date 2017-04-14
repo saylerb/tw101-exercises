@@ -53,6 +53,13 @@ public class DiamondExercises {
             }
 
             if (rowIndex == middleRowIndex && !isBlank(name)) {
+
+                Integer namePadding = (starTotal / 2) - (name.length() / 2);
+
+                for (int namePadIndex = 0; namePadIndex < namePadding; namePadIndex++) {
+                    System.out.print(" ");
+                }
+
                 System.out.print("Brian");
             } else {
                 for (int starIndex = 0; starIndex < starTotal; starIndex++) {
