@@ -16,11 +16,15 @@ public class DiamondExercises {
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
         for (int i = 0; i < n; i++) {
-            for (int num = n - i; num > 0; num--) {
+
+            Integer paddingTotal = n - i;
+            Integer starTotal = 2 * i + 1;
+
+            for (int padIndex = 0; padIndex < paddingTotal; padIndex++) {
                 System.out.print(" ");
             }
 
-            for (int asterisks = 0; asterisks < i + (i + 1); asterisks++) {
+            for (int starIndex = 0; starIndex < starTotal; starIndex++) {
                 System.out.print("*");
             }
             System.out.println();
